@@ -1,0 +1,50 @@
+### GET /
+GET http://localhost:1992
+
+
+### Register a user POST/ AUTH/ REGISTER
+post http://localhost:1992/auth/register
+Content-Type: application/json
+
+{
+    "username": "rtomar@gmail.com" ,
+    "password": "143311"
+}
+
+### login a user POST/AUTH/LOGIN
+post http://localhost:1992/auth/login
+Content-Type: application/json
+
+{
+    "username": "rtomar@gmail.com" ,
+    "password": "143311"
+}
+
+
+### fetch all todos GET/TODOS (Protected)
+GET http://localhost:1992/todos
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4Mjg3OTgxLCJleHAiOjE3NjgzNzQzODF9.INPDwkfNBRN_R0LomIQV_N586Owx_uGxD_NNp2aXcqc
+
+
+### create a new todo POST /TODOS (protected)
+POST http://localhost:1992/todos
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4Mjg3OTgxLCJleHAiOjE3NjgzNzQzODF9.INPDwkfNBRN_R0LomIQV_N586Owx_uGxD_NNp2aXcqc
+Content-Type: application/json
+
+{
+    "task":"Finish The Project"
+}
+
+
+### updating a todo PUT / TODOS/ :ID (protected)
+PUT http://localhost:1992/todos/2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4Mjg3OTgxLCJleHAiOjE3NjgzNzQzODF9.INPDwkfNBRN_R0LomIQV_N586Owx_uGxD_NNp2aXcqc
+Content-Type: application/json
+{
+    "completed": 1
+  
+}
+
+### delete a todo DELETE /TODOS/ :ID (protected)
+DELETE http://localhost:1992/todos/2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4Mjg3OTgxLCJleHAiOjE3NjgzNzQzODF9.INPDwkfNBRN_R0LomIQV_N586Owx_uGxD_NNp2aXcqc

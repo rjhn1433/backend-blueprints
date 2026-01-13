@@ -1,0 +1,23 @@
+### TEST GET / HOMEPAGE
+
+get http://localhost:3308
+
+### TEST GET / DASHBOARD
+get http://localhost:3308/dashboard
+
+### TEST GET / API / DATA
+get http://localhost:3308/api/data
+
+
+### TEST POST ( FOR ADDING A USER)
+Post http://localhost:3308/api/data
+Content-Type: application/json
+
+{
+    "name": "bhaskar"
+}
+
+
+### TEST DELETE (FOR DELETING THE USER in end)
+
+delete http://localhost:3308/api/data
